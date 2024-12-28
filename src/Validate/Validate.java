@@ -1,3 +1,5 @@
+package Validate;
+
 public class Validate {
 
     public boolean validNum (String str){

@@ -1,5 +1,10 @@
-import java.io.*;
+package Input;
 
+import Validate.Validate;
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.io.FileReader;
+import java.io.IOException;
 
 public class InputFile extends Validate implements Inputer {
     String path = "C:\\Users\\Juras\\IdeaProjects\\SomeProject\\src\\SomeFile.txt";

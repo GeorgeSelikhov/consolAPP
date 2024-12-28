@@ -1,3 +1,5 @@
+package Input;
+
 public interface Inputer {
     int inputDigit();
     String inputWord();

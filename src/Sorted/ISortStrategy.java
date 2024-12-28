@@ -1,4 +1,4 @@
-package main.java;
+package Sorted;
 
 import java.util.Collection;
 

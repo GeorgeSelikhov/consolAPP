@@ -1,4 +1,7 @@
-java.util.Scanner;
+package Input;
+
+import Validate.Validate;
+import java.util.Scanner;
 
 public class InputConsol extends Validate implements Inputer{
     Scanner input = new Scanner(System.in);
