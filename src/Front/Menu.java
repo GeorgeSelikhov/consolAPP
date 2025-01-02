@@ -18,6 +18,6 @@ public class Menu {
     public void exitMenu(){
         System.out.println("1. Повторить");
         System.out.println("2. Показать коллекцию");
-        System.out.println("3. Выход");
+        System.out.println("3. Прекратить заполнение");
     }
 }

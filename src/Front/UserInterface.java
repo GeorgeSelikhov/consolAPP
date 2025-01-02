@@ -5,36 +5,68 @@ import Input.InputConsol;
 public class UserInterface {
     Menu m = new Menu();
     InputConsol iC = new InputConsol();
+    int token;
     public void goInt(){
-        m.firstMenu();
         while (true) {
-            if (iC.inputDigit() == 1) {
-                m.collectMenu();
+            m.firstMenu();
+            token = iC.inputDigit();
+            if (token == 1) {
                 while (true) {
-                    if (iC.inputDigit() == 1) {
-                        //.....
-                    } else if (iC.inputDigit() == 2) {
-                        //......
-                    } else if (iC.inputDigit() == 3) {
-                        //.......
-                    } else if (iC.inputDigit() == 4) {
+                    m.collectMenu();
+                    token = iC.inputDigit();
+                    if (token == 1) {
+                        while (true) {
+                            //......
+                            m.exitMenu();
+                            token = iC.inputDigit();
+                            if (token == 1) {
+                                continue;
+                            } else if (token == 2) {
+                                //sout ArrayList
+                            } else if (token == 3) {
+                                break;
+                            }
+                        }
+                    } else if (token == 2) {
+                        while (true) {
+                            //......
+                            m.exitMenu();
+                            token = iC.inputDigit();
+                            if (token == 1) {
+                                continue;
+                            } else if (token == 2) {
+                                //sout ArrayList
+                            } else if (token == 3) {
+                                break;
+                            }
+                        }
+                    } else if (token == 3) {
+                        while (true) {
+                            //......
+                            m.exitMenu();
+                            token = iC.inputDigit();
+                            if (token == 1) {
+                                continue;
+                            } else if (token == 2) {
+                                //sout ArrayList
+                            } else if (token == 3) {
+                                break;
+                            }
+                        }
+                    } else if (token == 4) {
                         break;
                     }
-                    m.exitMenu();
-                    if(iC.inputDigit() == 2){
-                        break;
-                    }
-                }
-            } else if (iC.inputDigit() == 2) {
-                m.collectMenu();
-            } else if (iC.inputDigit() == 3) {
-                m.collectMenu();
-            } else if (iC.inputDigit() == 4) {
 
+                }
+            } else if (token == 2) {
+                m.collectMenu();
+            } else if (token == 3) {
+                m.collectMenu();
+            } else if (token == 4) {
+                break;
             }
         }
     }
-
 
 }
 
