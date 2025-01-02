@@ -1,12 +1,6 @@
-package Menu;
+package Front;
 
-public class UserInterface implements Button{
-    @Override
-    public String but(String str) {
-
-        return str;
-    }
-
+public class Menu {
     public void firstMenu(){
         System.out.println("1. Запись из консоли");
         System.out.println("2. Запись из файла");
@@ -18,6 +12,12 @@ public class UserInterface implements Button{
         System.out.println("1. Автомобиль");
         System.out.println("2. Книга");
         System.out.println("3. Корнеплод");
+        System.out.println("4. Назад");
+    }
+
+    public void exitMenu(){
+        System.out.println("1. Повторить");
+        System.out.println("2. Показать коллекцию");
+        System.out.println("3. Выход");
     }
 }
-
