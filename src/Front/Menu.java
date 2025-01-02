@@ -4,7 +4,7 @@ public class Menu {
     public void firstMenu(){
         System.out.println("1. Запись из консоли");
         System.out.println("2. Запись из файла");
-        System.out.println("3. Зандомное заполнение");
+        System.out.println("3. Рандомное заполнение");
         System.out.println("4. Выход");
     }
 
