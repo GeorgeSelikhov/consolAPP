@@ -1,12 +1,17 @@
 package Front;
 
 import Collect.BookCollect;
+import Collect.CarsCollect;
+import Collect.RootCollection;
 import Input.InputConsol;
 
 public class UserInterface {
     Menu m = new Menu();
     InputConsol iC = new InputConsol();
     BookCollect bC = new BookCollect();
+    CarsCollect cC = new CarsCollect();
+    RootCollection rC = new RootCollection();
+
     int token;
     public void goInt(){
         while (true) {
@@ -18,11 +23,10 @@ public class UserInterface {
                     token = iC.inputDigit();
                     if (token == 1) {
                         while (true) {
-                            bC.getBookList(iC.inputDigit(), iC.inputString(), iC.inputString());
                             m.exitMenu();
                             token = iC.inputDigit();
                             if (token == 1) {
-                                continue;
+                                bC.getBookList(iC.inputDigit(), iC.inputString(), iC.inputString());
                             } else if (token == 2) {
                                 bC.showBookList();
                             } else if (token == 3) {
@@ -31,26 +35,24 @@ public class UserInterface {
                         }
                     } else if (token == 2) {
                         while (true) {
-                            //......
                             m.exitMenu();
                             token = iC.inputDigit();
                             if (token == 1) {
-                                continue;
+                                cC.getCarsList(iC.inputDigit(), iC.inputString(), iC.inputString());
                             } else if (token == 2) {
-                                //sout ArrayList
+                                cC.showCarsList();
                             } else if (token == 3) {
                                 break;
                             }
                         }
                     } else if (token == 3) {
                         while (true) {
-                            //......
                             m.exitMenu();
                             token = iC.inputDigit();
                             if (token == 1) {
-                                continue;
+                                rC.getRootList(iC.inputDigit(), iC.inputString(), iC.inputString());
                             } else if (token == 2) {
-                                //sout ArrayList
+                                rC.showRootList();
                             } else if (token == 3) {
                                 break;
                             }

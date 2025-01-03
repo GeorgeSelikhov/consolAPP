@@ -9,14 +9,14 @@ public class Menu {
     }
 
     public void collectMenu(){
-        System.out.println("1. Автомобиль");
-        System.out.println("2. Книга");
+        System.out.println("1. Книга");
+        System.out.println("2. Автомобиль");
         System.out.println("3. Корнеплод");
         System.out.println("4. Назад");
     }
 
     public void exitMenu(){
-        System.out.println("1. Повторить");
+        System.out.println("1. Внести данные");
         System.out.println("2. Показать коллекцию");
         System.out.println("3. Прекратить заполнение");
     }
