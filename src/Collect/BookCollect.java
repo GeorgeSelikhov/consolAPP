@@ -8,11 +8,11 @@ public class BookCollect {
     List<Triple<Object,Object,Object>> bookList = new ArrayList<>();
 
 
-    public void getBookList(String str){
-        bookList.add(str);
+    public void getBookList(int year, String name, String charact ){
+        bookList.add(Triple.of(year, name, charact));
     }
 
-    public void showBokList(){
+    public void showBookList(){
         System.out.println(bookList);
     }
 }

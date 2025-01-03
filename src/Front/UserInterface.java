@@ -1,10 +1,12 @@
 package Front;
 
+import Collect.BookCollect;
 import Input.InputConsol;
 
 public class UserInterface {
     Menu m = new Menu();
     InputConsol iC = new InputConsol();
+    BookCollect bC = new BookCollect();
     int token;
     public void goInt(){
         while (true) {
@@ -16,13 +18,13 @@ public class UserInterface {
                     token = iC.inputDigit();
                     if (token == 1) {
                         while (true) {
-                            //......
+                            bC.getBookList(iC.inputDigit(), iC.inputString(), iC.inputString());
                             m.exitMenu();
                             token = iC.inputDigit();
                             if (token == 1) {
                                 continue;
                             } else if (token == 2) {
-                                //sout ArrayList
+                                bC.showBookList();
                             } else if (token == 3) {
                                 break;
                             }
