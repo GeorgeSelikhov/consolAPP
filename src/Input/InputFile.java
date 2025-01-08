@@ -58,6 +58,15 @@ public class InputFile extends Validate implements Inputer {
         return str;
     }
 
+    @Override
+    public double inputDouble(){
+        String str = this.arrStr[0];
+        if(!validNum(str)){
+            System.out.println("Eror digital");
+        }
+        return Double.parseDouble(str);
+    }
+
     //парсинг строки в массив
     private String[] parseStrToArray(String str){
         String[] parts = str.split("\r");

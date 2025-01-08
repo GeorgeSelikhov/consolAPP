@@ -23,9 +23,9 @@ public class FirstButton {
                     m.exitMenu();
                     token = iC.inputDigit();
                     if (token == 1) {
-                        bC.getBookList(iC.inputDigit(), iC.inputString(), iC.inputString());
+                        bC.setList();
                     } else if (token == 2) {
-                        bC.showBookList();
+                        bC.getList();
                     } else if (token == 3) {
                         break;
                     }
@@ -35,9 +35,9 @@ public class FirstButton {
                     m.exitMenu();
                     token = iC.inputDigit();
                     if (token == 1) {
-                        cC.getCarsList(iC.inputDigit(), iC.inputString(), iC.inputString());
+                        cC.setList();
                     } else if (token == 2) {
-                        cC.showCarsList();
+                        cC.getList();
                     } else if (token == 3) {
                         break;
                     }
@@ -47,9 +47,9 @@ public class FirstButton {
                     m.exitMenu();
                     token = iC.inputDigit();
                     if (token == 1) {
-                        rC.getRootList(iC.inputDigit(), iC.inputString(), iC.inputString());
+                        rC.setList();
                     } else if (token == 2) {
-                        rC.showRootList();
+                        rC.getList();
                     } else if (token == 3) {
                         break;
                     }

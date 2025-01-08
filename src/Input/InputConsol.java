@@ -41,4 +41,19 @@ public class InputConsol extends Validate implements Inputer{
         String str= input.nextLine();
         return str;
     }
+
+    @Override
+    public double inputDouble(){
+        String str = null;
+        System.out.print("Please, enter: ");
+        while(true){
+            str = input.nextLine();
+            if(validNum(str)){
+                break;
+            }else{
+                System.out.print("No, please again: ");
+            }
+        }
+        return Double.parseDouble(str);
+    }
 }
