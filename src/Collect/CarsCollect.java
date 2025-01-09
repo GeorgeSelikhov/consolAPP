@@ -11,8 +11,11 @@ public class CarsCollect implements TouchWithCollect{
     InputConsol iC = new InputConsol();
 
     public void setList(){
+        System.out.println("Enter muscle: ");
         double musc = iC.inputDouble();
+        System.out.println("Enter model's car: ");
         String model = iC.inputString();
+        System.out.println("Enter year: ");
         int year = iC.inputDigit();
         carsList.add(Triple.of(musc, model, year));
     }

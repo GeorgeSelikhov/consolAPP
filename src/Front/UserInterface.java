@@ -4,12 +4,14 @@ import Collect.BookCollect;
 import Collect.CarsCollect;
 import Collect.RootCollection;
 import Front.Button.FirstButton;
+import Front.Button.ThirdButton;
 import Input.InputConsol;
 
 public class UserInterface {
     Menu m = new Menu();
     InputConsol iC = new InputConsol();
     FirstButton fB = new FirstButton();
+    ThirdButton tB = new ThirdButton();
 
     int token;
     public void goInt(){
@@ -21,7 +23,7 @@ public class UserInterface {
             } else if (token == 2) {
                 m.collectMenu();
             } else if (token == 3) {
-                m.collectMenu();
+                tB.thirdButton();
             } else if (token == 4) {
                 break;
             }

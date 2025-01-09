@@ -9,7 +9,7 @@ public class InputConsol extends Validate implements Inputer{
     @Override
     public int inputDigit() {
         String str = null;
-        System.out.print("Please, enter: ");
+        System.out.print("Please, enter digit: ");
         while(true){
             str = input.nextLine();
             if(validNum(str)){
@@ -24,7 +24,7 @@ public class InputConsol extends Validate implements Inputer{
     @Override
     public String inputWord() {
         String str = null;
-        System.out.print("Please, enter: ");
+        System.out.print("Please, enter word: ");
         while(true){
             str = input.nextLine();
             if(validWord(str)){
@@ -38,6 +38,7 @@ public class InputConsol extends Validate implements Inputer{
 
     @Override
     public String inputString() {
+        System.out.print("Please, enter string: ");
         String str= input.nextLine();
         return str;
     }
@@ -45,7 +46,7 @@ public class InputConsol extends Validate implements Inputer{
     @Override
     public double inputDouble(){
         String str = null;
-        System.out.print("Please, enter: ");
+        System.out.print("Please, enter double: ");
         while(true){
             str = input.nextLine();
             if(validNum(str)){

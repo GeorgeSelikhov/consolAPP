@@ -12,8 +12,11 @@ public class BookCollect implements TouchWithCollect{
 
     @Override
     public void setList(){
+        System.out.println("Enter year: ");
         int year = iC.inputDigit();
+        System.out.println("Enter name book: ");
         String name = iC.inputString();
+        System.out.println("Enter character book: ");
         String charact = iC.inputString();
         bookList.add(Triple.of(year, name, charact));
     }
