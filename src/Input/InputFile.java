@@ -7,7 +7,7 @@ import java.io.FileReader;
 import java.io.IOException;
 
 public class InputFile extends Validate implements Inputer {
-    String path = "C:\\Users\\Juras\\IdeaProjects\\SomeProject\\src\\SomeFile.txt";
+    String path = "C:\\Users\\Juras\\IdeaProjects\\consolAPP\\src\\Input\\test.txt";
     //забор информации из файла
     private String fileRead(String path) throws FileNotFoundException {
         StringBuilder strBuild = new StringBuilder();
