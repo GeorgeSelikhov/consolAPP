@@ -35,7 +35,6 @@ public class RNDCollect {
         rootsList.add(Triple.of("Type5", 5.9, "grey"));
         rootsList.add(Triple.of("Type6", 6.0, "blue"));
         rootsList.add(Triple.of("Type7", 6.1, "orange"));
-        //rootsList.add(Triple.emptyArray();
     }
     public void some(){
         rootsList.get(0);

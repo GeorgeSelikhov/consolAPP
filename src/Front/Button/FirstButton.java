@@ -13,6 +13,9 @@ public class FirstButton {
     RootCollection rC = new RootCollection();
     Menu m = new Menu();
     int token;
+    int x, y;
+    double d;
+    String character, name;
 
     public void firstButton(){
         while (true) {
@@ -23,7 +26,13 @@ public class FirstButton {
                     m.exitMenu();
                     token = iC.inputDigit();
                     if (token == 1) {
-                        bC.setList();
+                        System.out.println("Введите дату написания книги.");
+                        x = iC.inputDigit();
+                        System.out.println("Введите название книги.");
+                        name = iC.inputString();
+                        System.out.println("Введите описание книги.");
+                        character = iC.inputString();
+                        bC.setList(x, name, character);
                     } else if (token == 2) {
                         bC.getList();
                     } else if (token == 3) {

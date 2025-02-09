@@ -22,18 +22,23 @@ public class InputFile extends Validate implements Inputer {
         }
         return strBuild.toString();
     }
+
     //запись файла в строку
-    private String fStr;
-    {
+    private String fileStr = writeFileToString();
+    private String writeFileToString(){
+        String str;
         try {
-            fStr = fileRead(path);
+            str = fileRead(path);
         } catch (FileNotFoundException e) {
             throw new RuntimeException(e);
         }
+        return str;
     }
-    //создание массива строк
-    String[] arrStr = parseStrToArray(fStr);
 
+    //создание массива строк
+    String[] arrStr = parseFileStrToArray(fileStr);
+
+    //овверрайды интерфейса
     @Override
     public int inputDigit() {
         String str = this.arrStr[0];
@@ -67,14 +72,24 @@ public class InputFile extends Validate implements Inputer {
         return Double.parseDouble(str);
     }
 
-    //парсинг строки в массив
-    private String[] parseStrToArray(String str){
-        String[] parts = str.split("\r");
+    //парсинг строк файла в массив
+    private String[] parseFileStrToArray(String str){
+        String[] parts = str.split("\n");
         for (int i = 0; i < parts.length; i++) {
             parts[i] = delSpcSymb(parts[i]);
         }
         return parts;
     }
+
+//    private String[] parseArrStrToSubArrStr(String[] arrIn, int i){
+//        String[] arrOut = new String[3];
+//        String str = arrIn[i];
+//        int fSpcInd = str.indexOf(" ");
+//        int lSpcInd;
+//        for (int j = 0; j < arrOut.length; j++) {
+//
+//        }
+//    }
 
     //чистка строки от лишних символов
     private String delSpcSymb(String str){

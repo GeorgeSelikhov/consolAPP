@@ -23,7 +23,7 @@ public class UserInterface {
             if (token == 1) {
                 fB.firstButton();
             } else if (token == 2) {
-                sb.
+                //sb.
             } else if (token == 3) {
                 tB.thirdButton();
             } else if (token == 4) {
