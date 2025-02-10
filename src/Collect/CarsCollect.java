@@ -10,14 +10,9 @@ public class CarsCollect implements TouchWithCollect{
     List<Triple<Object,Object,Object>> carsList = new ArrayList<>();
     InputConsol iC = new InputConsol();
 
-    public void setList(){
-        System.out.println("Enter muscle: ");
-        double musc = iC.inputDouble();
-        System.out.println("Enter model's car: ");
-        String model = iC.inputString();
-        System.out.println("Enter year: ");
-        int year = iC.inputDigit();
-        carsList.add(Triple.of(musc, model, year));
+    @Override
+    public void setList(double muscle, String model, int year){
+        carsList.add(Triple.of(muscle, model, year));
     }
 
     public void getList(){
