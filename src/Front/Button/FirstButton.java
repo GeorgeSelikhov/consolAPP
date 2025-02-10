@@ -44,7 +44,13 @@ public class FirstButton {
                     m.exitMenu();
                     token = iC.inputDigit();
                     if (token == 1) {
-                        cC.setList();
+                        System.out.println("Введите мощность");
+                        d = iC.inputDouble();
+                        System.out.println("Введите модель");
+                        name = iC.inputString();
+                        System.out.println("Ведите год");
+                        x = iC.inputDigit();
+                        cC.setList(d, name, x);
                     } else if (token == 2) {
                         cC.getList();
                     } else if (token == 3) {
@@ -56,7 +62,13 @@ public class FirstButton {
                     m.exitMenu();
                     token = iC.inputDigit();
                     if (token == 1) {
-                        rC.setList();
+                        System.out.println("Введите тип корнеплода");
+                        name = iC.inputString();
+                        System.out.println("Введите массу");
+                        d = iC.inputDouble();
+                        System.out.println("Введите цвет");
+                        character = iC.inputString();
+                        rC.setList(name, d, character);
                     } else if (token == 2) {
                         rC.getList();
                     } else if (token == 3) {

@@ -6,11 +6,10 @@ import java.util.List;
 import Input.InputConsol;
 import org.apache.commons.lang3.tuple.Triple;
 
-public class CarsCollect implements TouchWithCollect{
+public class CarsCollect {
     List<Triple<Object,Object,Object>> carsList = new ArrayList<>();
     InputConsol iC = new InputConsol();
 
-    @Override
     public void setList(double muscle, String model, int year){
         carsList.add(Triple.of(muscle, model, year));
     }
